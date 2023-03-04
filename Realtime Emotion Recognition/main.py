@@ -5,13 +5,13 @@ from keras.models import model_from_json
 emotion_dict = {0: "Angry", 1:"Disgusted",2: "Fearful", 3: "Happy", 4: "Neutral", 5: "Sad", 6: "Surprised"}
 
 #Loading the json file of the model
-json_file = open('data/model.json', 'r')
+json_file = open('data/model_59.json', 'r')
 loaded_model = json_file.read()
 json_file.close()
 emotion_model = model_from_json(loaded_model)
 
 #Loading weights to the model.
-emotion_model.load_weights("data/model_weights.h5")
+emotion_model.load_weights("data/model_59_weights.h5")
 print("Model loaded")
 
 #starting webcam feed
